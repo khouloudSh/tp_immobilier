@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Le titre du document</title>
+    <meta name="author" content="First Name Last Name" >
+    <meta name="description" content="Short Description of the page contents for SEO purposes" >
+    <link rel="stylesheet" href="style/main.css">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="https://use.fontawesome.com/b1d899ec1d.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <header>
+        <!-- MENU HAMBURGER -->
+            <div class="m_mobile_nav">
+                <div id="m_menu_hamburger" class="m_menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        <!-- END MENU HAMBURGER -->
+
+        <!-- LOGO COMPAGNIE -->
+        <div class="m_logo">
+            <img src="images/nom_image.jpg" alt="logo-compagnie">
+        </div>
+        <!-- END LOGO COMPAGNIE -->
+
+        <!-- NAVIGATION -->
+        <nav class="nav-hamburger">
+            <div class="centrer-menu">
+                <ul>
+                    <li><a href="index.html"><span class="fa fa-home fa-2x" aria-hidden="true"></span> accueil</a></li>
+                    <li><a href="service.html"><span class="fa fa-user-md fa-2x" aria-hidden="true"></span> catégories</a></li>
+                    <li><a href="contact.html"><span class="fa fa-envelope fa-2x" aria-hidden="true"></span> contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END NAVIGATION -->
+
+        <!-- SEARCH BUTTON-->
+        <form method="get" action="http://google.com/search">
+            <section class="sec">
+                <input type="search" name="search" placeholder="&#xF002; Search..." required style="font-family :Arial, FontAwesome"/>
+            </section>
+        </form>
+        <!-- END SEARCH BUTTON-->
+    </header>
+
+    <!-- CODE HTML POUR LE CAROUSELS -->
+
+    <!-- Conteneur du carousel au complet -->
+    <section id="carousel">
+        <!-- Ces input cachés associés a leur label en bas de page -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <!-- le conteneur des diapositives -->
+        <div id="slides">
+            <!-- La div qui delimite la partie visible du carousel -->
+            <div id="overflow">
+                <!-- La div qui contient les 5 diapositives -->
+                <div class="inner">
+                    <!-- la div qui contient la diapositive 1 -->
+                    <div class="photo">
+                        <img src="images/immobilier_1.jpg" alt="immobilier_1">
+                    </div>
+                    <!-- END diapositive 1 -->
+                    <!-- la div qui contient la diapositive  -->
+                    <div class="photo">
+                        <img src="images/immobilier_2.jpg" alt="immobilier_2">
+                    </div>
+                    <!-- END diapositive 2 -->
+                    <!-- la div qui contient la diapositive 3 -->
+                    <div class="photo">
+                        <img src="images/immobilier_3.jpg" alt="immobilier_3">
+                    </div>
+                </div>
+                <!-- END .inner -->
+            </div>
+            <!-- END #overflow -->
+        </div>
+        <!-- END #slides -->
+        <!-- boutons -->
+        <div id="boutons">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+        <!-- END boutons -->
+    </section>
+    <!-- END #carousel -->
+    <!-- END CAROUSELS -->
+
+    <main>
+        <div class="container">
+            <div class="m_nos_produits_vedettes row">
+                <div class="m_produit col-4">
+                    <figure>
+                        <img src="images/produit_1.jpg" alt="produit_1">
+                        <figcaption>A little description</figcaption>
+                    </figure>
+                </div>
+                <div class="m_produit col-4">
+                    <figure>
+                        <img src="images/produit_2.jpg" alt="produit_2">
+                        <figcaption>A little description</figcaption>
+                    </figure>
+                </div>
+                <div class="m_produit col-4">
+                    <figure>
+                        <img src="images/produit_3.jpg" alt="produit_3">
+                        <figcaption>A little description</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img src="images/mon_image.jpg" alt="Mon image">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="link">
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="service.html">catégories</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="icons" class="center">
+            <a href="https://twitter.com"><img src="images/twitter.png" alt="twitter"></a>
+            <a href="https://facebook.com"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://youtube.com"><img src="images/youtube.jpg" alt="youtube"></a>
+        </div>
+        <div id="contact">
+            <p>
+                contact us at :<br/>514-222-3333
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // script pour masquer et afficher le menu mobile
+        $(document).ready(function(){
+            $('#menu-hamburger').click(function(){
+                $('.nav-hamburger ul').toggleClass('expand');
+            });
+        });
+    </script>
+
+</body>
+</html>
