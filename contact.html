@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+<main id="k_contact_main">
+    <h2>Contact</h2>
+    <form>
+        <fieldset>
+            <legend>Contacter nous</legend>
+            <ul>
+                <li>
+                    <label for="nom">Nom </label>
+                    <input type="text" id="nom" required placeholder="votre nom" autofocus pattern="[a-zA-Z]" title="seulement des lettres"/>
+                </li>
+                <li>
+                    <label for="prenom">Prénom </label>
+                    <input type="text" id="prenom" required placeholder="votre prenom" pattern="[a-zA-Z]" title="seulement des lettres"/>
+                </li>
+                <li>
+                    <label for="telephone">Télephone </label>
+                    <input type="tel" id="telephone" required placeholder="votre numéro de téléphone" pattern="[0-90-90-9]" title="seulement des lettres"/>
+                </li>
+                <li>
+                    <label for="age">Age </label>
+                    <input type="number" id="age" required placeholder="votre age" title="seulement des lettres"/>
+                </li>
+                <li>
+                    <label for="email">Email </label>
+                    <input type="email" id="email" required placeholder="votre email" title="seulement des lettres"/>
+                </li>
+                <li>
+                    <label>Sexe</label>
+                    <input type="radio" id="masculin" name="sexe" value="masculin" checked />
+                    <label for="masculin">Masculin</label>
+                    <input type="radio" id="feminin" name="sexe" value="feminin" />
+                    <label for="feminin">Féminin</label>
+                </li>
+                <li>
+                    <label for="letter">Newslettre </label>
+                    <input type="checkbox" checked id="letter"/>
+                </li>
+                    <label for="msg">Commantaire </label>
+                    <textarea id="msg"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <input type="submit" value="Submit"/>
+    </form>
+</main>
+</body>
+</html>

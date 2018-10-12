@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    padding: 0;
+    margin: 0;
+}
+/********Page Contact********/
+#k_contact_main form{
+    width: 80%;
+}
+#k_contact_main form ul{
+    list-style:none;
+    padding:0;
+}
+
+#k_contact_main form label{
+    display:inline-block;
+    width: 25%;
+    height: 10px;
+    min-width:90px;
+    margin: 8px;
+}
+
+#k_contact_main form ul input{
+    display:inline-block;
+    width: 50%;
+    height: 20px;
+    margin: 8px;
+}
+/******************************/
+/********Page Categori********/
+
+#k_categori_main{
+    display: flex;
+    flex-direction: row;
+    background-color: coral;
+}
+#k_categori_main aside{
+    width: 25%;
+}
+
+#k_categori_main section{
+    width: 70%;
+}
+.k_categor_article{
+   /* visibility: hidden;*/
+}
+
+
+/*****************************/
