@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Produit</title>
+    <!-- OUTILS SERVANT DE FAIRE L'INCLUSION D'UN FICHIER -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>*
+    <meta name="author" content="First Name Last Name" >
+    <meta name="description" content="Short Description of the page contents for SEO purposes" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/grid.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="https://use.fontawesome.com/b1d899ec1d.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- INCLUSION DU FICHIER header.html -->
+    <div w3-include-html="header.html"></div>
+    <main>
+        <h1>Nom du produit(à changer avant livraison du produit)</h1>
+        <div class="row">
+            <div class="col-6 col-m-6">
+                <img src="images/nom_du_produit.jpg" alt="Mon nom du produit">
+            </div>
+            <div class="col-6 col-m-6">
+                <p>
+                    ça ira avec un peu de lorem ipsum
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- INCLUSION DU FICHIER footer.html -->
+    <div w3-include-html="footer.html"></div>
+
+    <!-- INCLUSION DES FICHIERS GRACE A SE SCRIPT CI-DESSUS -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

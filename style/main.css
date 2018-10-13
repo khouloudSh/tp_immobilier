@@ -1,6 +1,129 @@
+/*MAIN StyleSheet*/
+
+/*** Style pour mobile (= MOBILE FIRST APPROCH) = style par defaut  ***/
+
 *{
     box-sizing: border-box;
 }
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section { display: block; }
+
+
+header, footer{
+    background-color: RGBa(0,125,150,0.5);
+    font-size: 16px;
+}
+
+.m_logo{
+    float: right;
+}
+
+.m_logo img{
+
+}
+
+/*** DEBUT DU MENU HAMBURGER ***/
+
+#m_menu_hamburger{
+    padding: 10px 0;
+}
+
+.m_menu_btn span{
+    width: 50px;
+    height: 4px;
+    background-color : #fff;
+    margin: 8px;
+    display: block;
+}
+
+.m_nav-hamburger{
+    display: block; /*** Pour afficher les liens de navigations ***/
+}
+
+.m_nav-hamburger ul{
+    display: none; /*** Pour masquer les liens de navigations ***/
+}
+
+.expand{
+    display:block !important;
+}
+
+/*** FIN DU MENU HAMBURGER ***/
+
+.m_centrer-menu ul{
+    list-style: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    /*display: none; */
+}
+
+.m_centrer-menu ul li{
+    display:block;
+    height:50px;
+    line-height:50px;
+}
+
+.m_centrer-menu ul li a{
+    color: #fff;
+    text-decoration:none;
+    width:100%;
+    padding-left:5px;
+    display:block;
+}
+
+/*** FAIRE EN SORTE QUE LA BARRE DE RECHERCHE S'AFFICHE EN DESSOUS DU HEADER ***/
+@media only screen and (max-width: 640px){
+    .sec{
+        position: absolute;
+        width: 100%;
+    }
+
+    .sec input
+    {
+        clear : both;
+        width : 100%;
+        border-radius : 5px;
+    }
+}
+
+#m_carousel{
+    display: none;
+}
+
+.m_masquer_descendant img, .m_masquer_descendant figcaption{
+    display: none;
+}
+
+.m_produit h2{
+    font-size: 16px;
+
+}
+
+.m_produit h2:hover{
+
+}
+
+
+
+/*** FIN STYLE POUR LA VERSION MOBILE ***/
+
+
+/*** STYLE POUR LA VERSION TABLETTE ***/
+@media only screen and (min-width: 640px){
+
+}
+
+/*** FIN STYLE POUR LA VERSION TABLETTE ***/
+
+/*** STYLE POUR LA VERSION DESKTOP ***/
+@media only screen and (min-width: 960px){
+
+}
+
+/*** FIN STYLE POUR LA VERSION DESKTOP ***/
+
+
 html{
     padding: 0;
     margin: 0;
