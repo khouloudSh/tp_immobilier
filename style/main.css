@@ -36,10 +36,6 @@ header, footer{
     display: block;
 }
 
-.m_nav-hamburger{
-    display: block; /*** Pour afficher les liens de navigations ***/
-}
-
 .m_nav-hamburger ul{
     display: none; /*** Pour masquer les liens de navigations ***/
 }
@@ -88,22 +84,57 @@ header, footer{
 }
 
 #m_carousel{
-    display: none;
+    display: none; /*** Pour ne pas afficher en version mobile ***/
 }
 
 .m_masquer_descendant img, .m_masquer_descendant figcaption{
     display: none;
 }
 
-.m_produit h2{
-    font-size: 16px;
+/*** FOOTER ***/
 
+footer{
+    height :90px;
 }
 
-.m_produit h2:hover{
+/*.center{*/
+    /*float: right;*/
+    /*margin-top: -32px;*/
+    /*margin-right: 20px;*/
+/*}*/
 
+#m_container_footer{
+    height: 90px;
+    position: relative;
 }
 
+#m_icons{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.m_contact{
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+.m_contact p:first-letter{
+    text-transform: uppercase;
+}
+
+.m_contact span{
+    font-family: 'Srisakdi', cursive;
+    font-size: 18px;
+}
+
+.m_contact p{
+    font-family: 'Radley', serif;
+    font-size: 18px;
+}
+
+/*** END FOOTER ***/
 
 
 /*** FIN STYLE POUR LA VERSION MOBILE ***/
@@ -112,12 +143,210 @@ header, footer{
 /*** STYLE POUR LA VERSION TABLETTE ***/
 @media only screen and (min-width: 640px){
 
+    /*** HEADER ***/
+
+    header
+    {
+        width : 100%;
+        height : 80px;
+        background-color : RGBa(0,125,150,0.5);
+    }
+
+
+    .m_mobile_nav{
+        display: none;
+    }
+
+    .m_logo{
+        position: absolute;
+        float: left;
+        left: 10px;
+        top: 25px;
+    }
+
+    .sec{
+        position: absolute;
+        float: right;
+        right: 10px;
+        top: 25px;
+    }
+
+
+    .m_centrer-menu ul
+    {
+        display:block;
+    }
+
+
+    .m_centrer-menu ul li
+    {
+        list-style-type : none;
+        float : left;
+    }
+
+    .m_centrer-menu ul li a
+    {
+        display : inline-block;
+        text-decoration : none;
+        padding : 20px 15px;
+        color : red;
+        text-transform : uppercase;
+        font-size : 15px;
+    }
+    .m_nav-hamburger{
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .m_nav-hamburger ul{
+        display: block; /*** Pour afficher les liens de navigations ***/
+    }
+
+    /*** FIN HEADER ***/
+
+    /*** MAIN ***/
+
+    /** DEBUT CAROUSEL **/
+
+    /* On affiche le carousel en version tablette et desktop */
+    #m_carousel
+    {
+        display : block;
+    }
+
+    /* On style le carousel */
+
+    /* 1. LABEL en form de cercle */
+    #boutons label
+    {
+        width:10px;
+        height:10px;
+        background-color:#424558;
+        display: inline-block; /* Ce sont des element inline, donc ils prennent par defauts la largeur de leurs contenu, s'ils no'ont pas de contenu, il n' y a rien. On doit donc les convertir en inline-block si on veut les "voir". car on veut aussi les aligner */
+        border-radius : 5px;
+    }
+
+    /* 2. On centre les labels */
+    #boutons
+    {
+        text-align : center;
+    }
+
+    /* 3. On cache les input de type radio */
+    #m_carousel input
+    {
+        display : none;
+    }
+
+    /* 4. On aligne les diapositives */
+    .photo
+    {
+        float : left; /* On aligne les diapositives */
+        width : 20%; /* Chaque diapositif occupe 1/5 du parent .inner */
+        position:relative;
+    }
+
+    .photo img
+    {
+        width: 100%; /* On rend les images responsives */
+    }
+
+    /* 5. on definit la largeur de .inner */
+    .inner
+    {
+        width : 500%; /* 5*100% car on a 5 diapositives. si c'etait 3 diapositives, on mettrait 300% */
+    }
+
+    /* 6. On cache le contenu qui debord */
+    #overflow
+    {
+        overflow: hidden;
+    }
+
+    /* 7. On style les textes des bannieres */
+    .photo h3
+    {
+        color:yellow;
+        position:absolute;
+        top :20px;
+        left : 20px;
+    }
+
+    /* 1. FONCTIONNEMENT DU CAROUSEL */
+
+    /* quand je clique sur le premier label, il est aaoscie a l'input slide1, la div .inner qui est apres l'input, se place a une marge gauche de 0, donc on voit la 1ere diapositive */
+    #slide1:checked~ #slides .inner
+    {
+        margin-left:0;
+    }
+
+    /* quand je clique sur le 2ieme label, il est associe a l'input slide2, la div .inner qui est apres l'input, se place a une marge gauche de -100, donc on voit la 2ieme diapositive */
+    #slide2:checked~ #slides .inner
+    {
+        margin-left:-100%;
+    }
+
+    /* quand je clique sur le 3ieme label, il est associe a l'input slide3, la div .inner qui est apres l'input, se place a une marge gauche de -200, donc on voit la 3ieme diapositive */
+    #slide3:checked~ #slides .inner
+    {
+        margin-left:-200%;
+    }
+
+    /* quand je clique sur le 4ieme label, il est associe a l'input slide4, la div .inner qui est apres l'input, se place a une marge gauche de -300, donc on voit la 4ieme diapositive */
+    #slide4:checked~ #slides .inner
+    {
+        margin-left:-300%;
+    }
+
+    /* quand je clique sur le 5ieme label, il est associe a l'input slide5, la div .inner qui est apres l'input, se place a une marge gauche de -400, donc on voit la 5ieme diapositive */
+    #slide5:checked~ #slides .inner
+    {
+        margin-left:-400%;
+    }
+
+
+    /* 2. On applique une transformation sur .inner pour que les images defilent lorsqu'elles passent d'un etat initial (par exemple: margin-left:0) a un etat final (par exemple: margin-left:-200px;)  */
+    .inner
+    {
+        transition : all 1s ease-in-out;
+    }
+
+    /** FIN CAROUSEL **/
+
+    .m_produit h2{
+        display: none;
+    }
+
+    .m_masquer_descendant img, .m_masquer_descendant figcaption{
+        display: block;
+    }
+
+    /*** FIN MAIN ***/
+
+    /*** FOOTER ***/
+
+    /*** FIN FOOTER ***/
+
 }
 
 /*** FIN STYLE POUR LA VERSION TABLETTE ***/
 
 /*** STYLE POUR LA VERSION DESKTOP ***/
 @media only screen and (min-width: 960px){
+
+    /*** HEADER ***/
+
+    /*** FIN HEADER ***/
+
+    /*** MAIN ***/
+
+    /*** FIN MAIN ***/
+
+    /*** FOOTER ***/
+
+    /*** FIN FOOTER ***/
 
 }
 

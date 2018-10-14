@@ -6,41 +6,51 @@
 </head>
 <body>
     <header>
-        <!-- MENU HAMBURGER -->
-        <div class="m_mobile_nav">
-            <div id="m_menu_hamburger" class="m_menu_btn">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="m_division_colonne row">
+            <!-- MENU HAMBURGER -->
+            <div class="m_mobile_nav">
+                <div id="m_menu_hamburger" class="m_menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
-        <!-- END MENU HAMBURGER -->
+            <!-- END MENU HAMBURGER -->
 
-        <!-- LOGO COMPAGNIE -->
-        <div class="m_logo">
-            <img src="images/nom_image.jpg" alt="logo-compagnie">
-        </div>
-        <!-- END LOGO COMPAGNIE -->
-
-        <!-- NAVIGATION -->
-        <nav class="m_nav-hamburger">
-            <div class="m_centrer-menu">
-                <ul>
-                    <li><a href="index.html"><span class="fa fa-home fa-2x" aria-hidden="true"></span> accueil</a></li>
-                    <li><a href="service.html"><span class="fa fa-user-md fa-2x" aria-hidden="true"></span> catégories</a></li>
-                    <li><a href="contact.html"><span class="fa fa-envelope fa-2x" aria-hidden="true"></span> contact</a></li>
-                </ul>
+            <!-- LOGO COMPAGNIE -->
+            <div class="m_logo col-m-4">
+                <img src="images/nom_image.jpg" alt="logo-compagnie">
             </div>
-        </nav>
-        <!-- END NAVIGATION -->
+            <!-- END LOGO COMPAGNIE -->
 
-        <!-- SEARCH BUTTON-->
-        <form method="post" action="http://google.com/search">
-            <section class="sec">
-                <input type="search" name="search" placeholder="&#xF002; Search..." required style="font-family :Arial, FontAwesome"/>
-            </section>
-        </form>
-        <!-- END SEARCH BUTTON-->
+            <!-- NAVIGATION -->
+            <div class="col-m-4 m_mon_super_container">
+                <nav class="m_nav-hamburger col-m-4">
+                    <div class="m_centrer-menu">
+                        <ul>
+                            <li><a href="index.html"><span class="fa fa-home fa-2x" aria-hidden="true"></span> accueil</a></li>
+                            <li><a href="service.html"><span class="fa fa-user-md fa-2x" aria-hidden="true"></span> catégories</a></li>
+                            <li><a href="contact.html"><span class="fa fa-envelope fa-2x" aria-hidden="true"></span> contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- END NAVIGATION -->
+
+
+            <div class="col-m-4">
+                <!-- SEARCH BUTTON-->
+                <form method="post" action="http://google.com/search">
+                    <section class="sec">
+                        <input type="search" name="search" placeholder="&#xF002; Search..." required style="font-family :Arial, FontAwesome"/>
+                    </section>
+                </form>
+                <!-- END SEARCH BUTTON-->
+            </div>
+
+
+        </div>
     </header>
 </body>
 </html>
