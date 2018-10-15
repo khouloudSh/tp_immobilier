@@ -356,15 +356,18 @@ footer{
 html{
     padding: 0;
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 /********Page Contact********/
 #k_contact_main form{
     width: 80%;
+    margin: 5% auto 15% auto;
+
 }
 #k_contact_main form ul{
-    list-style:none;
-    padding:0;
-}
+     list-style:none;
+     padding:0;
+ }
 
 #k_contact_main form label{
     display:inline-block;
@@ -372,13 +375,42 @@ html{
     height: 10px;
     min-width:90px;
     margin: 8px;
+    padding-left: 50px;
+}
+#k_contact_main form ul li:nth-of-type(7),li:nth-of-type(6){
+    margin: 8px 0;
+    padding: 15px 0;
+
+}
+#k_contact_main form ul input[type=text],input[type=tel],input[type=email],input[type=number],textarea{
+    display:inline-block;
+    width: 70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+#k_contact_main form ul input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,input[type=number]:focus,textarea:focus{
+    background-color: #ddd;
+    outline: none;
+}
+#k_contact_main form input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    cursor: pointer;
+}
+#k_contact_main form ul textarea{
+    height: 200px;
 }
 
-#k_contact_main form ul input{
-    display:inline-block;
-    width: 50%;
-    height: 20px;
-    margin: 8px;
+#k_contact_main form input[type=submit]:hover {
+    opacity:1;
 }
 /******************************/
 /********Page Categori********/
@@ -386,18 +418,74 @@ html{
 #k_categori_main{
     display: flex;
     flex-direction: row;
-    background-color: coral;
+    position: relative;
+
 }
 #k_categori_main aside{
     width: 25%;
+    position: relative;
 }
-
+.k_categor_article{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 #k_categori_main section{
     width: 70%;
 }
-.k_categor_article{
-   /* visibility: hidden;*/
+.k_categor_article h2{
+   width: 100%;
+    text-align: center;
 }
 
+.k_cat_container{
+    width: 250px;
+    transition: transform .2s;
+    margin: 5px 10px;
+
+}
+
+k_cat_container:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+    border: 5px solid #891c32;
+}
+.k_cat_container img{
+    width: 100%;
+    height: 80%;
+}
+
+.k_cat_container div{
+    width: 100%;
+    height: 20%;
+    color: #ffffff;
+    background-color: #891c32;
+}
+#k_aside h3{
+    text-align: center;
+}
+#k_aside h4 {
+    text-align: center;
+    margin: 10px;
+    height: 80px;
+    background-color: grey;
+    padding: 10px;
+    color: white;
+    position: relative;
+}
+#k_aside h4:hover{
+    background-color: #bebebe;
+
+
+}
+#k_aside h4 a{
+    display: inline-block;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+
+
+}
 
 /*****************************/
