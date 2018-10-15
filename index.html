@@ -23,6 +23,8 @@
 </head>
 <body>
 
+    <!-- Lien GIT : //github.com/khouloudSh/tp_immobilier -->
+
     <!-- INCLUSION DU FICHIER header.html -->
     <div w3-include-html="header.html"></div>
 
@@ -75,15 +77,15 @@
         <div class="container">
             <div class="m_nos_produits_vedettes row">
                 <div class="m_produit col-4 col-m-6">
-                    <h2>Catégorie 1</h2>
-                    <figure class="m_masquer_descendant">
+                    <a href="#cat1">Catégorie 1</a>
+                    <figure class="m_masquer_descendant" id="cat1">
                         <img src="images/image_test.png" alt="produit_1">
                         <figcaption>A little description</figcaption>
                     </figure>
                 </div>
                 <div class="m_produit col-4 col-m-6">
-                    <h2>Catégorie 2</h2>
-                    <figure class="m_masquer_descendant">
+                    <a href="#cat2">Catégorie 2</a>
+                    <figure class="m_masquer_descendant" id="cat2">
                         <img src="images/image_test.png" alt="produit_2">
                         <figcaption>A little description</figcaption>
                     </figure>
@@ -98,15 +100,15 @@
             </div>
             <div class="m_nos_produits_vedettes row">
                 <div class="m_produit col-4 col-m-6">
-                    <h2>Catégorie 1</h2>
-                    <figure class="m_masquer_descendant">
+                    <a href="#cat3">Catégorie 3</a>
+                    <figure class="m_masquer_descendant" id="cat3">
                         <img src="images/image_test.png" alt="produit_1">
                         <figcaption>A little description</figcaption>
                     </figure>
                 </div>
                 <div class="m_produit col-4 col-m-6">
-                    <h2>Catégorie 2</h2>
-                    <figure class="m_masquer_descendant">
+                    <a href="#cat4">Catégorie 4</a>
+                    <figure class="m_masquer_descendant" id="cat4">
                         <img src="images/image_test.png" alt="produit_2">
                         <figcaption>A little description</figcaption>
                     </figure>
@@ -121,15 +123,15 @@
             </div>
             <div class="m_nos_produits_vedettes row">
                 <div class="m_produit col-4 col-m-6">
-                    <h2>Catégorie 1</h2>
-                    <figure class="m_masquer_descendant">
+                    <a href="#cat5">Catégorie 5</a>
+                    <figure class="m_masquer_descendant" id="cat5">
                         <img src="images/image_test.png" alt="produit_1">
                         <figcaption>A little description</figcaption>
                     </figure>
                 </div>
                 <div class="m_produit col-4 col-m-6">
-                    <h2>Catégorie 2</h2>
-                    <figure class="m_masquer_descendant">
+                    <a href="#cat6">Catégorie 6</a>
+                    <figure class="m_masquer_descendant" id="cat6">
                         <img src="images/image_test.png" alt="produit_2">
                         <figcaption>A little description</figcaption>
                     </figure>
@@ -159,7 +161,7 @@
     <!-- INCLUSION DU FICHIER footer.html -->
     <div w3-include-html="footer.html"></div>
 
-    <!-- INCLUSION DES FICHIERS GRACE A SE SCRIPT CI-DESSUS -->
+    <!-- INCLUSION DES FICHIERS GRACE A SE SCRIPT CI-DESSOUS -->
     <script>
         w3.includeHTML();
     </script>
@@ -167,8 +169,8 @@
     <script>
         // script pour masquer et afficher le menu mobile
         $(document).ready(function(){
-            $('#m_menu-hamburger').click(function(){
-                $('.m_nav-hamburger ul').toggleClass('.expand');
+            $('#m_menu_hamburger').click(function(){
+                $('nav ul').toggleClass('noshow');
             });
         });
     </script>

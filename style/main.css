@@ -40,9 +40,13 @@ header, footer{
     display: none; /*** Pour masquer les liens de navigations ***/
 }
 
-.expand{
-    display:block !important;
+.noshow{
+    display: none;
 }
+
+/*.expand{*/
+    /*display:block !important;*/
+/*}*/
 
 /*** FIN DU MENU HAMBURGER ***/
 
@@ -84,12 +88,25 @@ header, footer{
 }
 
 #m_carousel{
-    display: none; /*** Pour ne pas afficher en version mobile ***/
+    display: none; /*** Pour ne pas afficher le carousel en version mobile ***/
 }
 
 .m_masquer_descendant img, .m_masquer_descendant figcaption{
-    display: none;
+    display: none;  /*** Pour afficher les images qui sont dans l'élément figure ***/
 }
+
+.m_produit a{
+    display: block;
+    background-color: RGBa(0,125,150,0.5);
+    height: 50px;
+    text-align: center;
+    margin-top: 14px;
+    padding: 14px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /*** FOOTER ***/
 
