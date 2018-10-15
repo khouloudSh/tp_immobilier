@@ -445,9 +445,9 @@ html{
 
 }
 
-k_cat_container:hover{
+.k_cat_container:hover{
     -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    -webkit-transform: scale(1); /* Safari 3-8 */
     transform: scale(1.5);
     border: 5px solid #891c32;
 }
