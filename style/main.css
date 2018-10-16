@@ -14,12 +14,11 @@ header, footer{
     font-size: 16px;
 }
 
-.m_logo{
-    float: right;
-}
-
 .m_logo img{
-
+    width: 80px;
+    position: absolute;
+    right: 0;
+    top: 14px;
 }
 
 /*** DEBUT DU MENU HAMBURGER ***/
@@ -72,6 +71,10 @@ header, footer{
     display:block;
 }
 
+.m_produit img{
+    max-width: 100%;
+}
+
 /*** FAIRE EN SORTE QUE LA BARRE DE RECHERCHE S'AFFICHE EN DESSOUS DU HEADER ***/
 @media only screen and (max-width: 640px){
     .sec{
@@ -87,12 +90,16 @@ header, footer{
     }
 }
 
+input[type="search"]{
+    border-radius: 10px;
+}
+
 #m_carousel{
     display: none; /*** Pour ne pas afficher le carousel en version mobile ***/
 }
 
 .m_masquer_descendant img, .m_masquer_descendant figcaption{
-    display: none;  /*** Pour afficher les images qui sont dans l'élément figure ***/
+    display: block;  /*** Pour afficher les images qui sont dans l'élément figure ***/
 }
 
 .m_produit a{
@@ -221,6 +228,13 @@ footer{
         display: block; /*** Pour afficher les liens de navigations ***/
     }
 
+    .m_logo img{
+        width: 80px;
+        position: absolute;
+        left: 0;
+        top: -8px;
+    }
+
     /*** FIN HEADER ***/
 
     /*** MAIN ***/
@@ -332,6 +346,11 @@ footer{
 
     /** FIN CAROUSEL **/
 
+    .m_produit img{
+        width: 100%;
+        height: 250px;
+    }
+
     .m_produit h2{
         display: none;
     }
@@ -339,6 +358,10 @@ footer{
     .m_masquer_descendant img, .m_masquer_descendant figcaption{
         display: block;
     }
+
+    /*#produit_vedette_4{*/
+        /*margin-top: -193px;*/
+    /*}*/
 
     /*** FIN MAIN ***/
 

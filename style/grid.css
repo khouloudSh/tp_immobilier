@@ -4,20 +4,16 @@
     padding: 0 0;
 }
 
-
 *
 {
     box-sizing : border-box;
 }
-
-
 
 .row:after {
     content: "";
     clear: both;
     display: block;
 }
-
 
 /* Style pour tablette */
 @media only screen and (min-width:640px) {
@@ -35,10 +31,8 @@
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
 
-
     [class*="col-"]
     {
-
         float : left;
         /* On decolle le contenun grace au padding */
         padding: 0 15px;
