@@ -16,14 +16,14 @@ article4.style.display = 'none';
 article5.style.display = 'none';
 
 
-appartement.onclick(function () {
+appartement.click(function () {
     article1.style.display = 'flex';
     article2.style.display = 'none';
     article3.style.display = 'none';
     article4.style.display = 'none';
     article5.style.display = 'none';
 })
-maison.onclick(function () {
+maison.click(function () {
     article1.style.display = 'none';
     article2.style.display = 'flex';
     article3.style.display = 'none';
