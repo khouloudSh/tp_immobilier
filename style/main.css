@@ -23,6 +23,7 @@ header, footer{
 
 /*** DEBUT DU MENU HAMBURGER ***/
 
+/*** ERROR ***/
 #m_menu_hamburger{
     padding: 10px 0;
 }
@@ -35,17 +36,41 @@ header, footer{
     display: block;
 }
 
-/*.m_nav-hamburger ul{*/
-    /*display: none; !*** Pour masquer les liens de navigations ***!*/
-/*}*/
-
-.noshow{
-    display: none;
+.m_nav-hamburger{
+    display: block;
 }
 
-/*.expand{*/
-    /*display:block !important;*/
-/*}*/
+.m_nav-hamburger ul{
+    display: none; /*** Pour masquer les liens de navigations ***/
+}
+
+.noshow{
+    display:block !important;
+}
+
+/*** NO ERROR ***/
+#menu-hamburger {
+    padding:10px 0;
+}
+.menu-btn span {
+    width: 50px;
+    height:3px;
+    display:block;
+    background-color : #fff;
+    margin:8px;
+}
+
+.nav-hamburger
+{
+    display : block;
+}
+
+.nav-hamburger ul {
+    display : none;
+}
+.expand{
+    display:block !important;
+}
 
 /*** FIN DU MENU HAMBURGER ***/
 
