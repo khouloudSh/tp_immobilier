@@ -35,9 +35,9 @@ header, footer{
     display: block;
 }
 
-.m_nav-hamburger ul{
-    display: none; /*** Pour masquer les liens de navigations ***/
-}
+/*.m_nav-hamburger ul{*/
+    /*display: none; !*** Pour masquer les liens de navigations ***!*/
+/*}*/
 
 .noshow{
     display: none;
@@ -220,6 +220,7 @@ footer{
     }
     .m_nav-hamburger{
         display: flex;
+        flex-direction: row;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
