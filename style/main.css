@@ -8,17 +8,34 @@
 
 article, aside, details, figcaption, figure, footer, header, main, nav, section { display: block; }
 
-
-header, footer{
-    background-color: RGBa(0,125,150,0.5);
-    font-size: 16px;
+.m_centrer-menu ul li a{
+    padding: 0 1.2em;
 }
 
+footer img{
+    width: 50px;
+}
+header{
+    margin-bottom: 10px;
+}
+header, footer{
+    background-color: #140d0b;
+    font-size: .8em;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Cinzel', serif;
+    margin-right: 10px;
+    font-weight: lighter;
+    padding: 0 20px;
+}
+.m_logo{
+
+}
 .m_logo img{
     width: 80px;
     position: absolute;
     right: 0;
     top: 14px;
+    background-color: white;
 }
 
 /*** DEBUT DU MENU HAMBURGER ***/
@@ -52,7 +69,13 @@ header, footer{
 #menu-hamburger {
     padding:10px 0;
 }
-
+.menu-btn span {
+    width: 50px;
+    height:3px;
+    display:block;
+    background-color : #ab9142;
+    margin:8px;
+}
 
 .nav-hamburger
 {
@@ -62,12 +85,15 @@ header, footer{
 .nav-hamburger ul {
     display : none;
 }
+.expand{
+    display:block !important;
+}
 
 /*** FIN DU MENU HAMBURGER ***/
 
 .m_centrer-menu ul{
     list-style: none;
-    color: #fff;
+    color: #ab9142;
     padding: 0;
     margin: 0;
     /*display: none; */
@@ -80,10 +106,10 @@ header, footer{
 }
 
 .m_centrer-menu ul li a{
-    color: #fff;
+    color: #ab9142;
     text-decoration:none;
     width:100%;
-    padding-left:5px;
+  padding-left:5px;
     display:block;
 }
 
@@ -105,6 +131,14 @@ header, footer{
         width : 100%;
         border-radius : 5px;
     }
+    .m_centrer-menu ul li:hover{
+        background-color: gray();
+    }
+
+    #k_index_contacter_nous{
+        display: none;
+    }
+
 }
 
 input[type="search"]{
@@ -125,8 +159,8 @@ input[type="search"]{
     height: 50px;
     text-align: center;
     margin-top: 14px;
-    padding: 14px;
-    color: #fff;
+   /* padding: 14px;*/
+    color: #ab9142;
     text-decoration: none;
     cursor: pointer;
 }
@@ -182,7 +216,7 @@ footer{
 
 
 /*** STYLE POUR LA VERSION TABLETTE ***/
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 634px){
 
     /*** HEADER ***/
 
@@ -190,19 +224,10 @@ footer{
     {
         width : 100%;
         height : 80px;
-        background-color : RGBa(0,125,150,0.5);
     }
-
 
     .m_mobile_nav{
         display: none;
-    }
-
-    .m_logo{
-        position: absolute;
-        float: left;
-        left: 10px;
-        top: 25px;
     }
 
     .sec{
@@ -212,12 +237,10 @@ footer{
         top: 25px;
     }
 
-
     .m_centrer-menu ul
     {
         display:block;
     }
-
 
     .m_centrer-menu ul li
     {
@@ -231,15 +254,15 @@ footer{
         text-decoration : none;
         padding : 20px 15px;
         color : #ffffff;
-        text-transform : uppercase;
         font-size : 15px;
     }
     .m_nav-hamburger{
         display: flex;
         flex-direction: row;
         position: absolute;
-        left: 50%;
+        left: 46%;
         transform: translateX(-50%);
+        justify-content: space-evenly;
     }
 
     .m_nav-hamburger ul{
@@ -247,10 +270,11 @@ footer{
     }
 
     .m_logo img{
-        width: 80px;
+        width: 150px;
         position: absolute;
         left: 0;
-        top: -8px;
+        top: 0;
+        height: 80px;
     }
 
     /*** FIN HEADER ***/
@@ -355,7 +379,6 @@ footer{
         margin-left:-400%;
     }
 
-
     /* 2. On applique une transformation sur .inner pour que les images defilent lorsqu'elles passent d'un etat initial (par exemple: margin-left:0) a un etat final (par exemple: margin-left:-200px;)  */
     .inner
     {
@@ -366,7 +389,6 @@ footer{
 
     .m_produit img{
         width: 100%;
-        height: 250px;
     }
 
     .m_produit h2{
@@ -380,6 +402,34 @@ footer{
     /*#produit_vedette_4{*/
         /*margin-top: -193px;*/
     /*}*/
+
+    .photo{
+        position: relative;
+    }
+
+    .photo div{
+        position: absolute;
+        width: 40%;
+        color: white;
+        text-align: center;
+        border: 2px solid white;
+        font-size: 30px;
+        background-color: rgba(0,0,0,0.3);
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30%;
+        padding:15px;
+    }
+
+    .m_centrer-menu ul li a{
+        padding: 20px 10px;
+    }
+    #k_index_contacter_nous{
+        display: none;
+    }
 
     /*** FIN MAIN ***/
 
@@ -484,20 +534,116 @@ footer{
 
     /*** HEADER ***/
 
+    .m_division_colonne{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .m_centrer-menu ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .m_nav-hamburger{
+        display: flex;
+        flex-direction: row;
+       /* position: absolute;
+        left: 44%;*/
+        transform: translateX(-50%);
+        justify-content: space-evenly;
+    }
+    /*.m_centrer-menu ul li a{
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Cinzel', serif;
+
+        margin-right: 10px;
+
+        font-weight: lighter;
+        padding: 0 20px;
+    }*/
+    .m_centrer-menu ul li a::after{
+
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .3s;
+    }
+
+    .m_centrer-menu ul li a:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
     /*** FIN HEADER ***/
 
     /*** MAIN ***/
 
+    .photo{
+    position: relative;
+    }
+
+    .photo div{
+        position: absolute;
+        width: 40%;
+        color: white;
+        text-align: center;
+        border: 2px solid white;
+        font-size: 30px;
+        background-color: rgba(0,0,0,0.3);
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30%;
+        padding:15px;
+    }
+
+    #k_index_contacter_nous{
+        display: flex;
+        background-color: #1f1f1f;
+        color: #ab9142;
+        margin-bottom: 5px;
+    }
+
+    #k_index_contacter_nous div:nth-of-type(1){
+        padding: 5px;
+        flex: 1;
+        font-family: "Conduit ITC W01 Regular";
+        font-size: 20px;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+      }
+#k_index_contacter_nous button{
+    padding: 6px 40px;
+    border: 2px solid white;
+    color: white;
+    background-color: #1f1f1f ;
+}
+    #k_index_contacter_nous button:hover{
+        cursor: pointer;
+        color: #ab9142;
+        background-color: white;
+        border: 2px solid #ab9142;
+    }
+    #k_index_contacter_nous div:nth-of-type(2) img{
+
+        border-radius: 50%;
+        width: 400px;
+        display: block;
+        margin: auto;
+    }
     /*** FIN MAIN ***/
 
     /*** FOOTER ***/
 
     /*** FIN FOOTER ***/
-
 }
 
 /*** FIN STYLE POUR LA VERSION DESKTOP ***/
-
 
 html{
     padding: 0;
@@ -507,19 +653,25 @@ html{
 /********Page Contact********/
 h2{
     text-align: center;
+    padding: 10px;
+    color: #ab9142;
+    border-top: 3px solid #ab9142;
+    border-bottom: 3px solid #ab9142;
+    font-size: 40px;
+    font-family: "Conduit ITC W01 Regular";
 }
+
 
 #k_contact_main form label{
     display: none;
 }
-
-.k_contact_label>label{
-    display:inline-block;
-    width: 25%;
+.k_contact_label{
+    display:none;
+   /* width: 25%;
     height: 10px;
     min-width:90px;
     margin: 8px;
-    padding-left: 50px;
+    padding-left: 50px;*/
 }
 #k_contact_main form ul li:nth-of-type(7),li:nth-of-type(6){
     margin: 8px 0;
@@ -532,20 +684,20 @@ h2{
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background: #e4c8c8;
+    background: #ab9142a8;
 }
 #k_contact_main form ul input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,input[type=number]:focus,textarea:focus{
     background-color: #ddd;
     outline: none;
 }
 #k_contact_main form input[type=submit] {
-    background-color: #16a085;
+    background-color: rgba(142, 98, 68, 0.66);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+   /width: 100%;
     opacity: 0.9;
     cursor: pointer;
 }
@@ -611,7 +763,7 @@ h2{
     position: relative;
     display: block;
     padding: 0 0 0 1em;
-    background: #16a085;
+    background: #ab9142;
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
@@ -674,11 +826,7 @@ h2{
     margin-bottom: 10px;
 }
 
-h2{
-    color: #891c32;
-    font-size: 30px;
-    font-weight: bold;
-}
+
 
 /******version desktop******/
 @media only screen and (min-width: 960px) {
@@ -705,7 +853,6 @@ h2{
         -ms-transform: scale(1.2); /* IE 9 */
         -webkit-transform: scale(1.2); /* Safari 3-8 */
         transform: scale(1.2);
-
     }
 }
 

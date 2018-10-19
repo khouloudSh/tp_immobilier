@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Produit</title>
     <!-- OUTILS SERVANT DE FAIRE L'INCLUSION D'UN FICHIER -->
-    <script src="https://www.w3schools.com/lib/w3.js"></script>*
+
     <meta name="author" content="First Name Last Name" >
     <meta name="description" content="Short Description of the page contents for SEO purposes" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +20,50 @@
     <![endif]-->
 </head>
 <body>
-    <!-- INCLUSION DU FICHIER header.html -->
-    <div w3-include-html="header.html"></div>
+<header>
+    <div class="m_division_colonne row">
+        <!-- MENU HAMBURGER -->
+        <div class="m_mobile_nav">
+            <div id="m_menu_hamburger" class="m_menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- END MENU HAMBURGER -->
+
+        <!-- LOGO COMPAGNIE -->
+        <div class="m_logo col-2 col-m-2">
+            <img src="images/logo2.png" alt="logo-compagnie">
+        </div>
+        <!-- END LOGO COMPAGNIE -->
+
+        <!-- NAVIGATION -->
+        <div class="col-6 col-m-6 m_mon_super_container">
+            <nav class="m_nav-hamburger col-m-6">
+                <div class="m_centrer-menu">
+                    <ul class="noshow">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalogue.html">Catégories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- END NAVIGATION -->
+
+        <!-- SEARCH BUTTON-->
+        <div id="k_div_search" class="col-4 col-m-12">
+            <form method="post" action="http://google.com/search">
+                <section class="sec">
+                    <input type="search" name="search" placeholder="&#xF002; Search..." required style="font-family :Arial, FontAwesome"/>
+                </section>
+            </form>
+            <!-- END SEARCH BUTTON-->
+        </div>
+    </div>
+</header>
+
     <main>
         <h1>Nom du produit(à changer avant livraison du produit)</h1>
         <!--<div class="row">-->
@@ -111,13 +153,29 @@
             <!--</div>-->
         </div>
     </main>
-    <!-- INCLUSION DU FICHIER footer.html -->
-    <div w3-include-html="footer.html"></div>
-
-    <!-- INCLUSION DES FICHIERS GRACE A SE SCRIPT CI-DESSUS -->
-    <script>
-        w3.includeHTML();
-    </script>
+    <footer>
+        <!--<div id="link">-->
+        <!--<nav>-->
+        <!--<ul>-->
+        <!--<li><a href="index.html">home</a></li>-->
+        <!--<li><a href="service.html">catégories</a></li>-->
+        <!--<li><a href="contact.html">contact</a></li>-->
+        <!--</ul>-->
+        <!--</nav>-->
+        <!--</div>-->
+        <div class="row" id="m_container_footer">
+            <div class="m_contact">
+                <p>
+                    contact us at :<br/><span>514-222-3333</span>
+                </p>
+            </div>
+            <div id="m_icons" class="center">
+                <a href="https://facebook.com"><img src="images/facebook-icon.png" alt="facebook"></a>
+                <a href="https://youtube.com"><img src="images/youtub_logo.png" alt="youtube"></a>
+                <a href="https://twitter.com"><img src="images/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         var slideIndex = 1;
