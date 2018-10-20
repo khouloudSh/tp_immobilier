@@ -20,89 +20,86 @@
     <![endif]-->
 </head>
 <body>
-<header>
-    <div class="m_division_colonne row">
-        <!-- MENU HAMBURGER -->
-        <div class="m_mobile_nav">
-            <div id="m_menu_hamburger" class="m_menu_btn">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- START HEADER -->
+    <header>
+        <div class="m_division_colonne row">
+            <!-- MENU HAMBURGER -->
+            <div class="m_mobile_nav">
+                <div id="m_menu_hamburger" class="m_menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- END MENU HAMBURGER -->
+
+            <!-- LOGO COMPAGNIE -->
+            <div class="m_logo col-2 col-m-2">
+                <img src="images/logo2.png" alt="logo-compagnie">
+            </div>
+            <!-- END LOGO COMPAGNIE -->
+
+            <!-- NAVIGATION -->
+            <div class="col-6 col-m-6 m_mon_super_container">
+                <nav class="m_nav-hamburger col-m-6">
+                    <div class="m_centrer-menu">
+                        <ul class="noshow">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="catalogue.html">Catégories</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- END NAVIGATION -->
+
+            <!-- SEARCH BUTTON-->
+            <div id="k_div_search" class="col-4 col-m-12">
+                <form method="post" action="http://google.com/search">
+                    <section class="sec">
+                        <input type="search" name="search" placeholder="&#xF002; Search..." required style="font-family :Arial, FontAwesome"/>
+                    </section>
+                </form>
+                <!-- END SEARCH BUTTON-->
             </div>
         </div>
-        <!-- END MENU HAMBURGER -->
+    </header>
+    <!-- END HEADER -->
 
-        <!-- LOGO COMPAGNIE -->
-        <div class="m_logo col-2 col-m-2">
-            <img src="images/logo2.png" alt="logo-compagnie">
-        </div>
-        <!-- END LOGO COMPAGNIE -->
-
-        <!-- NAVIGATION -->
-        <div class="col-6 col-m-6 m_mon_super_container">
-            <nav class="m_nav-hamburger col-m-6">
-                <div class="m_centrer-menu">
-                    <ul class="noshow">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="catalogue.html">Catégories</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!-- END NAVIGATION -->
-
-        <!-- SEARCH BUTTON-->
-        <div id="k_div_search" class="col-4 col-m-12">
-            <form method="post" action="http://google.com/search">
-                <section class="sec">
-                    <input type="search" name="search" placeholder="&#xF002; Search..." required style="font-family :Arial, FontAwesome"/>
-                </section>
-            </form>
-            <!-- END SEARCH BUTTON-->
-        </div>
-    </div>
-</header>
-
-    <main>
-        <h1>Nom du produit(à changer avant livraison du produit)</h1>
-        <!--<div class="row">-->
-            <!--<div class="col-m-6  m_produit_vedette">-->
-                <!--<img src="images/ap1/ap1.jpg" alt="Mon nom du produit">-->
-            <!--</div>-->
-
-            <!-- Container for the image gallery -->
-            <div class="container">
+    <main class="row">
+        <div class="col-6">
+            <h1>Nom du produit(à changer avant livraison du produit)</h1>
+            <div class="p-container">
 
                 <!-- Full-width images with number text -->
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img src="images/img_woods_wide.jpg" style="width:100%">
+                    <img src="images/appartement1.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">2 / 6</div>
-                    <img src="images/img_5terre_wide.jpg" style="width:100%">
+                    <img src="images/appartement2.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">3 / 6</div>
-                    <img src="images/img_mountains_wide.jpg" style="width:100%">
+                    <img src="images/appartement3.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">4 / 6</div>
-                    <img src="images/img_lights_wide.jpg" style="width:100%">
+                    <img src="images/appartement4.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">5 / 6</div>
-                    <img src="images/img_nature_wide.jpg" style="width:100%">
+                    <img src="images/appartment5.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">6 / 6</div>
-                    <img src="images/img_snow_wide.jpg" style="width:100%">
+                    <img src="images/appartement6.jpg" style="width:100%">
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -117,40 +114,31 @@
                 <!-- Thumbnail images -->
                 <div class="row">
                     <div class="column">
-                        <img class="demo cursor" src="images/img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                        <img class="demo cursor" src="images/appartement1_under.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="images/img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                        <img class="demo cursor" src="images/appartement2_under.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="images/img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                        <img class="demo cursor" src="images/appartement3_under.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="images/img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                        <img class="demo cursor" src="images/appartement4_under.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="images/img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                        <img class="demo cursor" src="images/appartement5_under.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="images/img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                        <img class="demo cursor" src="images/appartement6_under.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
                     </div>
                 </div>
             </div>
-
-            <!--<div class="col-6 col-m-6  m_description">-->
-                <!--<p>-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-                <!--</p>-->
-            <!--</div>-->
+        </div>
+        <div class="col-6" id="description-produit">
+            <h2>Une petite description</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
     </main>
     <footer>
