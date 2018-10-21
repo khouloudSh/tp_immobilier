@@ -19,13 +19,12 @@ header{
     margin-bottom: 10px;
 }
 header, footer{
-    background-color: #140d0b;
+    background-color: #99978b;
     font-size: .8em;
     font-family: 'Titillium Web', sans-serif;
     font-family: 'Cinzel', serif;
-    margin-right: 10px;
     font-weight: lighter;
-    padding: 0 20px;
+
 }
 .m_logo{
 
@@ -35,7 +34,7 @@ header, footer{
     position: absolute;
     right: 0;
     top: 14px;
-    background-color: white;
+
 }
 
 /*** DEBUT DU MENU HAMBURGER ***/
@@ -69,6 +68,7 @@ header, footer{
 #menu-hamburger {
     padding:10px 0;
 }
+
 .menu-btn span {
     width: 50px;
     height:3px;
@@ -106,12 +106,14 @@ header, footer{
 }
 
 .m_centrer-menu ul li a{
-    color: #ab9142;
+    color: #282828;
     text-decoration:none;
     width:100%;
-  padding-left:5px;
+    padding-left:20px;
     display:block;
+    font-weight: 900;
 }
+
 
 .m_produit img{
     max-width: 100%;
@@ -119,9 +121,11 @@ header, footer{
 
 /*** FAIRE EN SORTE QUE LA BARRE DE RECHERCHE S'AFFICHE EN DESSOUS DU HEADER ***/
 @media only screen and (max-width: 640px){
+
     .sec{
         position: absolute;
         width: 100%;
+        font-size: 20px;
     }
 
     .sec input
@@ -704,9 +708,9 @@ html{
 h2{
     text-align: center;
     padding: 10px;
-    color: #ab9142;
-    border-top: 3px solid #ab9142;
-    border-bottom: 3px solid #ab9142;
+    color: #282828;
+    border-top: 3px solid #282828;
+    border-bottom: 3px solid #282828;
     font-size: 40px;
     font-family: "Conduit ITC W01 Regular";
 }
@@ -890,7 +894,8 @@ h2{
         width: 25%;
     }
     .k_tab-content{
-        width: 70%;
+       width: 100%;
+        margin-left: 8px;
     }
 
     .k_cat_container {
