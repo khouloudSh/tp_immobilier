@@ -321,6 +321,19 @@ footer{
     text-align: justify;
 }
 
+
+/*** DEBUT CODE DE KHOULOUD AJOUTE PAR MOUSSA ***/
+h2{
+    text-align: center;
+    padding: 10px;
+    color: #ab9142;
+    border-top: 3px solid #ab9142;
+    border-bottom: 3px solid #ab9142;
+    font-size: 40px;
+    font-family: "Conduit ITC W01 Regular";
+}
+/*** FIN CODE DE KHOULOUD AJOUTE PAR MOUSSA ***/
+
 /*** END STYLE SPECIAL POUR LES PRODUITS ***/
 
 
@@ -497,6 +510,7 @@ footer{
         transition : all 1s ease-in-out;
     }
 
+
     /** FIN CAROUSEL **/
 
     .m_produit img{
@@ -580,7 +594,8 @@ footer{
 
 /*** FIN STYLE POUR LA VERSION TABLETTE ***/
 
-/*** STYLE POUR LA VERSION DESKTOP ***/
+
+/*** COMMENCEMENT DU STYLE DE LA VERSION DESKTOP ***/
 @media only screen and (min-width: 960px){
 
     /*** HEADER ***/
@@ -697,7 +712,19 @@ footer{
     /*** FIN FOOTER ***/
 }
 
-/*** FIN STYLE POUR LA VERSION DESKTOP ***/
+/*** FIN DU STYLE DE LA VERSION DESKTOP ***/
+
+
+
+
+
+
+
+
+/***  CODE AJOUTE PAR KHOULOUD ***/
+
+
+
 
 html{
     padding: 0;
@@ -759,7 +786,7 @@ h2{
     height: 200px;
 }
 
-#k_contact_main form input[type=submit]:hover {
+#k_contact_main form input[type="submit"]:hover {
     opacity:1;
 }
 #k_contact_main form ul{
@@ -767,7 +794,7 @@ h2{
     padding:0;
 }
 @media only screen and (min-width: 960px) {
-    #k_contact_main form ul input[type=text],input[type=tel],input[type=email],input[type=number],textarea{
+    #k_contact_main form ul input[type="text"],input[type="tel"],input[type="email"],input[type="number"],textarea{
         width: 70%;
     }
     #k_contact_main form{
