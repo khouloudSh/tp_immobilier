@@ -85,7 +85,7 @@ footer img{
 }
 
 footer{
-    height :90px;
+    height :fit-content;
 }
 
 #m_container_footer{
