@@ -86,7 +86,8 @@ header, footer{
     display : none;
 }
 .expand{
-    display:block !important;
+   display:block !important;
+
 }
 
 /*** FIN DU MENU HAMBURGER ***/
@@ -96,7 +97,7 @@ header, footer{
     color: #ab9142;
     padding: 0;
     margin: 0;
-    /*display: none; */
+    display: none;
 }
 
 .m_centrer-menu ul li{
@@ -154,6 +155,14 @@ input[type="search"]{
 
 .m_masquer_descendant img, .m_masquer_descendant figcaption{
     display: block;  /*** Pour afficher les images qui sont dans l'élément figure ***/
+
+}
+.overlay{
+    text-align: center;
+    background-color: #7d7a67;
+    color: black;
+    padding: 12px 0;
+    text-shadow: 2px 2px #7d7a67;
 }
 
 .m_produit a{
@@ -698,13 +707,39 @@ h2{
         border: 2px solid #ab9142;
     }
 
+    #k_index_contacter_nous{
+        position: relative;
+    }
+
     #k_index_contacter_nous div:nth-of-type(2) img{
 
-        border-radius: 50%;
-        width: 400px;
+
+        width: 200px;
         display: block;
-        margin: auto;
+        margin: 20px auto;
+        border: 5px solid white;
     }
+
+    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(1){
+        position: absolute;
+        right: 5%;
+        z-index: 1;
+    }
+    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(2){
+        position: absolute;
+        right: 13%;
+        bottom: 3%;
+        z-index: 2;
+    }
+
+    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(3){
+        position: absolute;
+        right: 25%;
+        z-index: 2;
+    }
+#k_index_video{
+    margin: 50px;
+}
     /*** FIN MAIN ***/
 
     /*** FOOTER ***/
@@ -740,6 +775,7 @@ h2{
     border-bottom: 3px solid #282828;
     font-size: 40px;
     font-family: "Conduit ITC W01 Regular";
+    margin-top: 50px;
 }
 
 
