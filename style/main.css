@@ -1,23 +1,31 @@
 /*MAIN StyleSheet*/
 
 /*** Style pour mobile (= MOBILE FIRST APPROCH) = style par defaut  ***/
-
 *{
     box-sizing: border-box;
 }
 
+html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    margin: 0;
+}
 article, aside, details, figcaption, figure, footer, header, main, nav, section { display: block; }
 
-.m_centrer-menu ul li a{
-    padding: 0 1.2em;
+h2{
+    text-align: center;
+    padding: 10px;
+    color: #282828;
+    border-top: 3px solid #282828;
+    border-bottom: 3px solid #282828;
+    font-size: 40px;
+    font-family: "Conduit ITC W01 Regular";
+    margin-top: 50px;
 }
 
-footer img{
-    width: 50px;
-}
-header{
-    margin-bottom: 10px;
-}
 header, footer{
     background-color: #99978b;
     font-size: .8em;
@@ -26,19 +34,95 @@ header, footer{
     font-weight: lighter;
 
 }
-.m_logo{
-
+/**HEADER**/
+header{
+    margin-bottom: 10px;
 }
 .m_logo img{
     width: 80px;
     position: absolute;
     right: 0;
     top: 14px;
-
+}
+.m_centrer-menu ul li a{
+    padding: 0 1.2em;
 }
 
-/*** DEBUT DU MENU HAMBURGER ***/
+.m_centrer-menu ul{
+    list-style: none;
+    color: #ab9142;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
 
+.m_centrer-menu ul li{
+    display:block;
+    height:50px;
+    line-height:50px;
+}
+
+.m_centrer-menu ul li a{
+    color: #282828;
+    text-decoration:none;
+    width:100%;
+    padding-left:20px;
+    display:block;
+    font-weight: 900;
+}
+
+.m_produit img{
+    max-width: 100%;
+}
+
+input[type="search"]{
+    border-radius: 10px;
+}
+
+/**FOOTER**/
+footer img{
+    width: 50px;
+}
+
+footer{
+    height :90px;
+}
+
+#m_container_footer{
+    display: flex;
+    align-items: center;
+}
+.siteinfos{
+    text-align: center;
+    padding: 5px;
+}
+.siteinfos a{
+    padding: 10px;
+}
+#m_icons_footer{
+    text-align: center;
+}
+
+.m_contact{
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+.m_contact p:first-letter{
+    text-transform: uppercase;
+}
+
+.m_contact span{
+    font-family: 'Srisakdi', cursive;
+    font-size: 18px;
+}
+
+.m_contact p{
+    font-family: 'Radley', serif;
+    font-size: 18px;
+}
+/*** DEBUT DU MENU HAMBURGER ***/
 /*** ERROR ***/
 #m_menu_hamburger{
     padding: 10px 0;
@@ -86,41 +170,19 @@ header, footer{
     display : none;
 }
 .expand{
-   display:block !important;
+    display:block !important;
 
 }
 
+video{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
 /*** FIN DU MENU HAMBURGER ***/
 
-.m_centrer-menu ul{
-    list-style: none;
-    color: #ab9142;
-    padding: 0;
-    margin: 0;
-    display: none;
-}
-
-.m_centrer-menu ul li{
-    display:block;
-    height:50px;
-    line-height:50px;
-}
-
-.m_centrer-menu ul li a{
-    color: #282828;
-    text-decoration:none;
-    width:100%;
-    padding-left:20px;
-    display:block;
-    font-weight: 900;
-}
-
-
-.m_produit img{
-    max-width: 100%;
-}
-
-/*** FAIRE EN SORTE QUE LA BARRE DE RECHERCHE S'AFFICHE EN DESSOUS DU HEADER ***/
+/*****STYLE POUR LE MOBILE******/
 @media only screen and (max-width: 640px){
 
     .sec{
@@ -136,23 +198,21 @@ header, footer{
         border-radius : 5px;
     }
     .m_centrer-menu ul li:hover{
-        background-color: gray();
+        background-color: gray;
     }
 
     #k_index_contacter_nous{
         display: none;
     }
-
+    video{
+        display: none;
+    }
 }
 
-input[type="search"]{
-    border-radius: 10px;
-}
-
+/***MAIN - PAGE INDEX***/
 #m_carousel{
     display: none; /*** Pour ne pas afficher le carousel en version mobile ***/
 }
-
 .m_masquer_descendant img, .m_masquer_descendant figcaption{
     display: block;  /*** Pour afficher les images qui sont dans l'élément figure ***/
 
@@ -171,59 +231,79 @@ input[type="search"]{
     height: 50px;
     text-align: center;
     margin-top: 14px;
-   /* padding: 14px;*/
+    /* padding: 14px;*/
     color: #ab9142;
     text-decoration: none;
     cursor: pointer;
 }
 
-
-/*** FOOTER ***/
-
-footer{
-    height :90px;
-}
-
-/*.center{*/
-    /*float: right;*/
-    /*margin-top: -32px;*/
-    /*margin-right: 20px;*/
-/*}*/
-
-#m_container_footer{
-    height: 90px;
+/******MAIN - PAGE PRODUITS*****/
+.p-container {
     position: relative;
 }
-
-#m_icons{
+.mySlides {
+    display: none;
+}
+.cursor {
+    cursor: pointer;
+}
+.prev, .next {
+    cursor: pointer;
     position: absolute;
-    right: 10px;
-    top: 20px;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
-
-.m_contact{
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
     position: absolute;
-    left: 10px;
-    top: 8px;
+    top: 0;
+}
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 16.66%;
+}
+.demo {
+    opacity: 0.6;
 }
 
-.m_contact p:first-letter{
-    text-transform: uppercase;
+.active,
+.demo:hover {
+    opacity: 1;
 }
 
-.m_contact span{
-    font-family: 'Srisakdi', cursive;
-    font-size: 18px;
+#description-produit p{
+    text-align: justify;
 }
 
-.m_contact p{
-    font-family: 'Radley', serif;
-    font-size: 18px;
-}
-
-/*** END FOOTER ***/
-
-/*** START RESPONSIVE MAP ***/
+/******MAIN - PAGE CONTACT*****/
 .map-responsive {
     overflow:hidden;
     padding-bottom:56.25%;
@@ -238,557 +318,9 @@ footer{
     width:100%;
     position:absolute;
 }
-/*** END RESPONSIVE MAP ***/
-
-
-/*** DEBUT STYLE SPECIAL POUR LES PRODUITS ***/
-
-/* Position the image container (needed to position the left and right arrows) */
-.p-container {
-    position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-    cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Six columns side by side */
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-    opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
-#description-produit p{
-    text-align: justify;
-}
-
-
-/*** DEBUT CODE DE KHOULOUD AJOUTE PAR MOUSSA ***/
-h2{
-    text-align: center;
-    padding: 10px;
-    color: #ab9142;
-    border-top: 3px solid #ab9142;
-    border-bottom: 3px solid #ab9142;
-    font-size: 40px;
-    font-family: "Conduit ITC W01 Regular";
-}
-/*** FIN CODE DE KHOULOUD AJOUTE PAR MOUSSA ***/
-
-/*** END STYLE SPECIAL POUR LES PRODUITS ***/
-
-
-/*** FIN STYLE POUR LA VERSION MOBILE ***/
-
-
-/*** STYLE POUR LA VERSION TABLETTE ***/
-@media only screen and (min-width: 634px){
-
-    /*** HEADER ***/
-
-    header
-    {
-        width : 100%;
-        height : 80px;
-    }
-
-    .m_mobile_nav{
-        display: none;
-    }
-
-    .sec{
-        position: absolute;
-        float: right;
-        right: 10px;
-        top: 25px;
-    }
-
-    .m_centrer-menu ul
-    {
-        display:block;
-    }
-
-    .m_centrer-menu ul li
-    {
-        list-style-type : none;
-        float : left;
-    }
-
-    .m_centrer-menu ul li a
-    {
-        display : inline-block;
-        text-decoration : none;
-        padding : 20px 15px;
-        color : #ffffff;
-        font-size : 15px;
-    }
-    .m_nav-hamburger{
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        left: 46%;
-        transform: translateX(-50%);
-        justify-content: space-evenly;
-    }
-
-    .m_nav-hamburger ul{
-        display: block; /*** Pour afficher les liens de navigations ***/
-    }
-
-    .m_logo img{
-        width: 150px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 80px;
-    }
-
-    /*** FIN HEADER ***/
-
-    /*** MAIN ***/
-
-    /** DEBUT CAROUSEL **/
-
-    /* On affiche le carousel en version tablette et desktop */
-    #m_carousel
-    {
-        display : block;
-    }
-
-    /* On style le carousel */
-
-    /* 1. LABEL en form de cercle */
-    #boutons label
-    {
-        width:10px;
-        height:10px;
-        background-color:#424558;
-        display: inline-block; /* Ce sont des element inline, donc ils prennent par defauts la largeur de leurs contenu, s'ils no'ont pas de contenu, il n' y a rien. On doit donc les convertir en inline-block si on veut les "voir". car on veut aussi les aligner */
-        border-radius : 5px;
-    }
-
-    /* 2. On centre les labels */
-    #boutons
-    {
-        text-align : center;
-    }
-
-    /* 3. On cache les input de type radio */
-    #m_carousel input
-    {
-        display : none;
-    }
-
-    /* 4. On aligne les diapositives */
-    .photo
-    {
-        float : left; /* On aligne les diapositives */
-        width : 20%; /* Chaque diapositif occupe 1/5 du parent .inner */
-        position:relative;
-    }
-
-    .photo img
-    {
-        width: 100%; /* On rend les images responsives */
-    }
-
-    /* 5. on definit la largeur de .inner */
-    .inner
-    {
-        width : 500%; /* 5*100% car on a 5 diapositives. si c'etait 3 diapositives, on mettrait 300% */
-    }
-
-    /* 6. On cache le contenu qui debord */
-    #overflow
-    {
-        overflow: hidden;
-    }
-
-    /* 7. On style les textes des bannieres */
-    .photo h3
-    {
-        color:yellow;
-        position:absolute;
-        top :20px;
-        left : 20px;
-    }
-
-    /* 1. FONCTIONNEMENT DU CAROUSEL */
-
-    /* quand je clique sur le premier label, il est aaoscie a l'input slide1, la div .inner qui est apres l'input, se place a une marge gauche de 0, donc on voit la 1ere diapositive */
-    #slide1:checked~ #slides .inner
-    {
-        margin-left:0;
-    }
-
-    /* quand je clique sur le 2ieme label, il est associe a l'input slide2, la div .inner qui est apres l'input, se place a une marge gauche de -100, donc on voit la 2ieme diapositive */
-    #slide2:checked~ #slides .inner
-    {
-        margin-left:-100%;
-    }
-
-    /* quand je clique sur le 3ieme label, il est associe a l'input slide3, la div .inner qui est apres l'input, se place a une marge gauche de -200, donc on voit la 3ieme diapositive */
-    #slide3:checked~ #slides .inner
-    {
-        margin-left:-200%;
-    }
-
-    /* quand je clique sur le 4ieme label, il est associe a l'input slide4, la div .inner qui est apres l'input, se place a une marge gauche de -300, donc on voit la 4ieme diapositive */
-    #slide4:checked~ #slides .inner
-    {
-        margin-left:-300%;
-    }
-
-    /* quand je clique sur le 5ieme label, il est associe a l'input slide5, la div .inner qui est apres l'input, se place a une marge gauche de -400, donc on voit la 5ieme diapositive */
-    #slide5:checked~ #slides .inner
-    {
-        margin-left:-400%;
-    }
-
-    /* 2. On applique une transformation sur .inner pour que les images defilent lorsqu'elles passent d'un etat initial (par exemple: margin-left:0) a un etat final (par exemple: margin-left:-200px;)  */
-    .inner
-    {
-        transition : all 1s ease-in-out;
-    }
-
-
-    /** FIN CAROUSEL **/
-
-    .m_produit img{
-        width: 100%;
-    }
-
-    .m_produit h2{
-        display: none;
-    }
-
-    .m_masquer_descendant img, .m_masquer_descendant figcaption{
-        display: block;
-    }
-
-    /*#produit_vedette_4{*/
-        /*margin-top: -193px;*/
-    /*}*/
-
-    .photo{
-        position: relative;
-    }
-
-    .photo div{
-        position: absolute;
-        width: 40%;
-        color: white;
-        text-align: center;
-        border: 2px solid white;
-        font-size: 30px;
-        background-color: rgba(0,0,0,0.3);
-        font-family: 'Titillium Web', sans-serif;
-        font-family: 'Cinzel', serif;
-        text-transform: uppercase;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 30%;
-        padding:15px;
-    }
-
-    .m_centrer-menu ul li a{
-        padding: 20px 10px;
-    }
-    #k_index_contacter_nous{
-        display: none;
-    }
-
-    /*** DEBUT DU CODE IMAGE OVERLAY ***/
-
-    .i-container{
-        position: relative;
-    }
-
-    .overlay {
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5); /* Black see-through */
-        color: #f1f1f1;
-        width: 100%;
-        transition: .5s ease;
-        opacity:0;
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .i-container:hover .overlay {
-        opacity: 1;
-    }
-
-    /*** FIN DU CODE IMAGE OVERLAY ***/
-
-    /*** FIN MAIN ***/
-
-    /*** FOOTER ***/
-
-    /*** FIN FOOTER ***/
-
-}
-
-/*** FIN STYLE POUR LA VERSION TABLETTE ***/
-
-
-/*** COMMENCEMENT DU STYLE DE LA VERSION DESKTOP ***/
-@media only screen and (min-width: 960px){
-
-    /*** HEADER ***/
-
-    .m_division_colonne{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .m_centrer-menu ul{
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .m_nav-hamburger{
-        display: flex;
-        flex-direction: row;
-       /* position: absolute;
-        left: 44%;*/
-        transform: translateX(-50%);
-        justify-content: space-evenly;
-    }
-    /*.m_centrer-menu ul li a{
-        font-family: 'Titillium Web', sans-serif;
-        font-family: 'Cinzel', serif;
-
-        margin-right: 10px;
-
-        font-weight: lighter;
-        padding: 0 20px;
-    }*/
-    .m_centrer-menu ul li a::after{
-
-        content: '';
-        display: block;
-        width: 0;
-        height: 2px;
-        background: #fff;
-        transition: width .3s;
-    }
-
-    .m_centrer-menu ul li a:hover::after{
-        width: 100%;
-        transition: width .3s;
-    }
-    /*** FIN HEADER ***/
-
-    /*** MAIN ***/
-
-    .photo{
-    position: relative;
-    }
-
-    .photo div{
-        position: absolute;
-        width: 40%;
-        color: white;
-        text-align: center;
-        border: 2px solid white;
-        font-size: 30px;
-        background-color: rgba(0,0,0,0.3);
-        font-family: 'Titillium Web', sans-serif;
-        font-family: 'Cinzel', serif;
-        text-transform: uppercase;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 30%;
-        padding:15px;
-    }
-
-    #k_index_contacter_nous{
-        display: flex;
-        background-color: #1f1f1f;
-        color: #ab9142;
-        margin-bottom: 5px;
-    }
-
-    #k_index_contacter_nous div:nth-of-type(1){
-        padding: 5px;
-        flex: 1;
-        font-family: "Conduit ITC W01 Regular";
-        font-size: 20px;
-        -webkit-font-smoothing: antialiased;
-        text-align: center;
-      }
-
-    #k_index_contacter_nous button{
-        padding: 6px 40px;
-        border: 2px solid white;
-        color: white;
-        background-color: #1f1f1f ;
-    }
-
-    #k_index_contacter_nous button:hover{
-        cursor: pointer;
-        color: #ab9142;
-        background-color: white;
-        border: 2px solid #ab9142;
-    }
-
-    #k_index_contacter_nous{
-        position: relative;
-    }
-
-    #k_index_contacter_nous div:nth-of-type(2) img{
-
-
-        width: 200px;
-        display: block;
-        margin: 20px auto;
-        border: 5px solid white;
-    }
-
-    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(1){
-        position: absolute;
-        right: 5%;
-        z-index: 1;
-    }
-    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(2){
-        position: absolute;
-        right: 13%;
-        bottom: 3%;
-        z-index: 2;
-    }
-
-    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(3){
-        position: absolute;
-        right: 25%;
-        z-index: 2;
-    }
-#k_index_video{
-    margin: 50px;
-}
-    /*** FIN MAIN ***/
-
-    /*** FOOTER ***/
-
-    /*** FIN FOOTER ***/
-}
-
-/*** FIN DU STYLE DE LA VERSION DESKTOP ***/
-
-
-
-
-
-
-
-
-/***  CODE AJOUTE PAR KHOULOUD ***/
-
-
-
-
-html{
-    padding: 0;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-/********Page Contact********/
-h2{
-    text-align: center;
-    padding: 10px;
-    color: #282828;
-    border-top: 3px solid #282828;
-    border-bottom: 3px solid #282828;
-    font-size: 40px;
-    font-family: "Conduit ITC W01 Regular";
-    margin-top: 50px;
-}
-
-
-#k_contact_main form label{
-    display: none;
-}
 .k_contact_label{
     display:none;
-   /* width: 25%;
-    height: 10px;
-    min-width:90px;
-    margin: 8px;
-    padding-left: 50px;*/
+
 }
 #k_contact_main form ul li:nth-of-type(7),li:nth-of-type(6){
     margin: 8px 0;
@@ -801,7 +333,7 @@ h2{
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background: #ab9142a8;
+    background: #ab9142;
 }
 #k_contact_main form ul input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,input[type=number]:focus,textarea:focus{
     background-color: #ddd;
@@ -814,7 +346,7 @@ h2{
     margin: 8px 0;
     border: none;
     cursor: pointer;
-   /width: 100%;
+/width: 100%;
     opacity: 0.9;
     cursor: pointer;
 }
@@ -829,28 +361,7 @@ h2{
     list-style:none;
     padding:0;
 }
-@media only screen and (min-width: 960px) {
-    #k_contact_main form ul input[type="text"],input[type="tel"],input[type="email"],input[type="number"],textarea{
-        width: 70%;
-    }
-    #k_contact_main form{
-        width: 80%;
-        margin: 5% auto 15% auto;
-
-    }
-
-    #k_contact_main form label{
-        display:inline-block;
-        width: 25%;
-        height: 10px;
-        min-width:90px;
-        margin: 8px;
-        padding-left: 50px;
-    }
-}
-/******************************/
-/********Page Categori********/
-/*********/
+/******MAIN - PAGE CATALOGUE*****/
 
 #k_categori_main {
     display: flex;
@@ -880,10 +391,14 @@ h2{
     position: relative;
     display: block;
     padding: 0 0 0 1em;
-    background: #ab9142;
+    background: #891c32;
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
+
+}
+.k_tab:first-child{
+    margin-top: 20px;
 }
 
 .k_tab-content {
@@ -930,6 +445,9 @@ h2{
 .k_cat_container{
     width: 100%;
 }
+.k_cat_container a{
+    text-decoration: none;
+}
 .k_cat_container img {
     width: 100%;
 
@@ -941,13 +459,383 @@ h2{
     height: 20%;
     padding: 1em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
+/******FIN STYLE PAR DEFAUT*******/
+
+/*** DEBUT STYLE POUR LA VERSION TABLETTE ***/
+@media only screen and (min-width: 634px){
 
 
-/******version desktop******/
-@media only screen and (min-width: 960px) {
+    /***HEADER***/
+    header
+    {
+        width : 100%;
+        height : 80px;
+    }
 
+    .m_mobile_nav{
+        display: none;
+    }
+
+    .sec{
+        position: absolute;
+        float: right;
+        right: 10px;
+        top: 25px;
+    }
+
+    .m_centrer-menu ul
+    {
+        display:block;
+    }
+
+    .m_centrer-menu ul li
+    {
+        list-style-type : none;
+        float : left;
+    }
+
+    .m_centrer-menu ul li a
+    {
+        display : inline-block;
+        text-decoration : none;
+        padding : 20px 15px;
+        color : #ffffff;
+        font-size : 15px;
+    }
+    .m_nav-hamburger{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 46%;
+        transform: translateX(-50%);
+        justify-content: space-evenly;
+    }
+    .m_nav-hamburger ul {
+        display: block;
+    }
+    .m_logo img{
+        width: 150px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 80px;
+    }
+    /*** FIN HEADER ***/
+
+    /*** MAIN INDEX***/
+    #m_carousel
+    {
+        display : block;
+    }
+    #boutons label
+    {
+        width:10px;
+        height:10px;
+        background-color:#424558;
+        display: inline-block;
+        border-radius : 5px;
+    }
+    #boutons
+    {
+        text-align : center;
+    }
+    #m_carousel input
+    {
+        display : none;
+    }
+
+    .photo
+    {
+        float : left;
+        width : 20%;
+        position:relative;
+    }
+
+    .photo img
+    {
+        width: 100%;
+    }
+
+    .inner
+    {
+        width : 500%;
+    }
+
+    #overflow
+    {
+        overflow: hidden;
+    }
+
+    .photo h3
+    {
+        color:yellow;
+        position:absolute;
+        top :20px;
+        left : 20px;
+    }
+
+    #slide1:checked~ #slides .inner
+    {
+        margin-left:0;
+    }
+
+    #slide2:checked~ #slides .inner
+    {
+        margin-left:-100%;
+    }
+
+    #slide3:checked~ #slides .inner
+    {
+        margin-left:-200%;
+    }
+
+    #slide4:checked~ #slides .inner
+    {
+        margin-left:-300%;
+    }
+
+    #slide5:checked~ #slides .inner
+    {
+        margin-left:-400%;
+    }
+
+    .inner
+    {
+        transition : all 1s ease-in-out;
+    }
+    .m_produit img{
+        width: 100%;
+    }
+
+    .m_produit h2{
+        display: none;
+    }
+
+    .m_masquer_descendant img, .m_masquer_descendant figcaption{
+        display: block;
+    }
+
+    .photo{
+        position: relative;
+    }
+
+    .photo div{
+        position: absolute;
+        width: 40%;
+        color: white;
+        text-align: center;
+        border: 2px solid white;
+        font-size: 30px;
+        background-color: rgba(0,0,0,0.3);
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30%;
+        padding:15px;
+    }
+
+    .m_centrer-menu ul li a{
+        padding: 20px 10px;
+    }
+    #k_index_contacter_nous{
+        display: none;
+    }
+    .i-container{
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .i-container:hover .overlay {
+        opacity: 1;
+    }
+
+    .k_cat_container {
+        width: 50%;
+    }
+}
+/*** FIN STYLE POUR LA VERSION TABLETTE ***/
+
+/*** COMMENCEMENT DU STYLE DE LA VERSION DESKTOP ***/
+@media only screen and (min-width: 960px){
+    /*** HEADER ***/
+    .m_division_colonne{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .m_centrer-menu ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .m_nav-hamburger{
+        display: flex;
+        flex-direction: row;
+        /* position: absolute;
+         left: 44%;*/
+        transform: translateX(-50%);
+        justify-content: space-evenly;
+    }
+    .m_centrer-menu ul li a::after{
+
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .3s;
+    }
+
+    .m_centrer-menu ul li a:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
+    /*** FIN HEADER ***/
+
+    /*** MAIN INDEX***/
+    .photo{
+        position: relative;
+    }
+
+    .photo div{
+        position: absolute;
+        width: 40%;
+        color: white;
+        text-align: center;
+        border: 2px solid white;
+        font-size: 30px;
+        background-color: rgba(0,0,0,0.3);
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30%;
+        padding:15px;
+    }
+
+    #k_index_contacter_nous{
+        display: flex;
+        background-color: #1f1f1f;
+        color: #ab9142;
+        margin-bottom: 5px;
+    }
+
+    #k_index_contacter_nous div:nth-of-type(1){
+        padding: 5px;
+        flex: 1;
+        font-family: "Conduit ITC W01 Regular";
+        font-size: 20px;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+    }
+
+    #k_index_contacter_nous a{
+        padding: 6px 40px;
+        border: 2px solid white;
+        color: white;
+        background-color: #1f1f1f ;
+    }
+
+    #k_index_contacter_nous a:hover{
+        cursor: pointer;
+        color: #ab9142;
+        background-color: white;
+        border: 2px solid #ab9142;
+    }
+
+    #k_index_contacter_nous{
+        position: relative;
+    }
+
+    #k_index_contacter_nous div:nth-of-type(2) img{
+
+
+        width: 200px;
+        display: block;
+        margin: 20px auto;
+        border: 5px solid white;
+    }
+
+    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(1){
+        position: absolute;
+        right: 5%;
+        z-index: 1;
+    }
+    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(2){
+        position: absolute;
+        right: 13%;
+        bottom: 3%;
+        z-index: 2;
+    }
+
+    #k_index_contacter_nous div:nth-of-type(2) img:nth-of-type(3){
+        position: absolute;
+        right: 25%;
+        z-index: 2;
+    }
+    #k_index_video{
+        margin: 50px;
+    }
+
+    /********MAIN Page Contact********/
+    #k_contact_main form ul input[type="text"],input[type="tel"],input[type="email"],input[type="number"],textarea{
+        width: 70%;
+    }
+    #k_contact_main form{
+        width: 80%;
+        margin: 5% auto 15% auto;
+
+    }
+
+    #k_contact_main form label{
+        display:inline-block;
+        width: 25%;
+        height: 10px;
+        min-width:90px;
+        margin: 8px;
+        padding-left: 50px;
+    }
+    #k_contact_main form ul input[type="text"],input[type="tel"],input[type="email"],input[type="number"],textarea{
+        width: 70%;
+    }
+    #k_contact_main form{
+        width: 80%;
+        margin: 5% auto 15% auto;
+
+    }
+
+    #k_contact_main form label{
+        display:inline-block;
+        width: 25%;
+        height: 10px;
+        min-width:90px;
+        margin: 8px;
+        padding-left: 50px;
+    }
+
+    /********MAIN Page Catalogue********/
     .k_tab{
         display: flex;
         flex-direction: row;
@@ -957,14 +845,14 @@ h2{
         width: 25%;
     }
     .k_tab-content{
-       width: 100%;
+        width: 100%;
         margin-left: 8px;
     }
 
     .k_cat_container {
         width: 250px;
         transition: transform .1s;
-       /* margin: 5px 10px;*/
+        /* margin: 5px 10px;*/
     }
 
     .k_cat_container:hover {
@@ -973,5 +861,3 @@ h2{
         transform: scale(1.2);
     }
 }
-
-/*****************************/

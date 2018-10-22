@@ -7,8 +7,10 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Moussa Ndiaye Khouloud Shabou" >
     <meta name="description" content="Nous sommes joingnable du Lundi au Vendredi de 8AM à 4PM, alors n'hésitez pas de nous contactez ou vous déplacez dans nos succursales." >
-    <link rel="canonical"href="http://modern-home.projetisi.com/index.html">
+    <link rel="canonical" href="http://modern-home.projetisi.com/index.html">
     <!-- END SEO -->
+    <link href="https://fonts.googleapis.com/css?family=Srisakdi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Radley" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/grid.css" />
     <link rel="stylesheet" href="style/main.css" />
@@ -84,7 +86,7 @@
                 </li>
                 <li>
                     <label for="telephone"  class="k_contact_label col-3">Télephone </label>
-                    <input type="tel" id="telephone" required placeholder="votre numéro de téléphone" pattern="[0-90-90-9]" title="seulement des lettres" class="col-9 col-m-12"/>
+                    <input type="tel" id="telephone" required placeholder="123-123-1234" pattern="[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]" title="forma 123-123-1234" class="col-9 col-m-12"/>
                 </li>
                 <li>
                     <label for="age"  class="k_contact_label col-3">Age </label>
@@ -102,7 +104,7 @@
                     <label for="feminin" >Féminin</label>
                 </li>
                 <li>
-                    <label class=>Newslettre</label>
+                    <label>Newslettre</label>
                     <input type="checkbox" checked id="letter"/>
                     <label for="letter" >Recevoir nos offre </label>
 
@@ -118,15 +120,20 @@
 </main>
 <footer>
     <div class="row" id="m_container_footer">
-        <div class="m_contact">
-            <p>
-                contact us at :<br/><span>514-222-3333</span>
-            </p>
+        <div class="siteinfos col-4 col-m-3">
+            <a href="index.html">Acceuil</a>
+            <a href="contact.html">Contacter Nous</a>
+
         </div>
-        <div id="m_icons" class="center">
+        <div id="m_icons_footer" class="center col-4 col-m-3">
             <a href="https://facebook.com"><img src="images/facebook-icon.png" alt="facebook"></a>
             <a href="https://youtube.com"><img src="images/youtub_logo.png" alt="youtube"></a>
             <a href="https://twitter.com"><img src="images/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="siteinfos col-4 col-m-3">
+            <div class="siteinfo"><b>Phone</b>: 514.842.2426</div>
+            <div class="siteinfo"><b>email</b>: info@isi-mtl.com</div>
+            <div class="siteinfo"><b>Address</b>: 100-255 blvd crémazie est ,Montreal</div>
         </div>
     </div>
 </footer>
